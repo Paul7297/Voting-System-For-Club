@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/bg.jpeg");
+    background-size: cover;
+  
+}
+
+.container {
+    background: #bfd5ea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background: #2a2f55;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.election-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.election-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.election-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.action-form {
+    display: inline;
+}
+
+.action-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pause-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.pause-button:hover {
+    background-color: #c0392b;
+}
+
+.resume-button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.resume-button:hover {
+    background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .election-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

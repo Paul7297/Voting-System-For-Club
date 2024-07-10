@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/admin-dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome , <%= admin.username %> (admin)</h1>
+      <!-- <p>This is the admin dashboard.</p> -->
+    </header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/admin/create-election">Create Election</a></li>
+        <li><a href="/admin/delete-elections">Delete Elections</a></li>
+        <li><a href="/admin/pause-elections">Pause/Resume Elections</a></li>
+        <li><a href="/view-results">View Results</a></li>
+        <li><a href="/admin/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

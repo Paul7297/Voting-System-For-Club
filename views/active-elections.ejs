@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Elections</title>
+    <link rel="stylesheet" href="/css/active-elections.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Active Elections</h1>
+        </header>
+        <% if (activeElections.length > 0) { %>
+            <ul class="election-list">
+                <% activeElections.forEach(election => { %>
+                    <li>
+                        <a href="/active-election/<%= election._id %>"><%= election.electionName %></a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <h2>No Active Election</h2>
+        <% } %>
+       
+         
+    </div>
+</body>
+</html>

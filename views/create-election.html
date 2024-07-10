@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Election</title>
+    <link rel="stylesheet" href="/css/create-election.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Create Election</h1>
+        </header>
+        <form action="/admin/create-election" method="POST" id="createElectionForm">
+            <div class="form-group">
+                <label for="electionName">Election Name:</label>
+                <input type="text" id="electionName" name="electionName" required>
+            </div>
+            
+            <div id="candidates" class="form-group">
+                <label for="candidate1">Candidate 1:</label>
+                <input type="text" id="candidate1" name="voter1" required>
+            </div>
+
+            <button type="button" class="add-candidate" onclick="addCandidate()">Add Candidate</button>
+
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="datetime-local" id="endTime" name="endTime" required>
+            </div>
+
+            <input type="submit" value="Create Election" class="submit-btn">
+        </form>
+    </div>
+
+    <script>
+        let candidateCount = 1;
+
+        function addCandidate() {
+            candidateCount++;
+            const candidatesDiv = document.getElementById('candidates');
+            const newCandidateDiv = document.createElement('div');
+            newCandidateDiv.className = 'form-group';
+            const newCandidateLabel = document.createElement('label');
+            newCandidateLabel.setAttribute('for', 'candidate' + candidateCount);
+            newCandidateLabel.textContent = 'Candidate ' + candidateCount + ':';
+            const newCandidateInput = document.createElement('input');
+            newCandidateInput.type = 'text';
+            newCandidateInput.id = 'candidate' + candidateCount;
+            newCandidateInput.name = 'voter' + candidateCount;
+            newCandidateInput.required = true;
+            newCandidateDiv.appendChild(newCandidateLabel);
+            newCandidateDiv.appendChild(newCandidateInput);
+            candidatesDiv.appendChild(newCandidateDiv);
+        }
+    </script>
+</body>
+</html>

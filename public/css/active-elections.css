@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../images/bg.jpeg");
+    background-size: cover;
+  
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background: #2a2f55;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.election-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.election-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.election-list li:last-child {
+    border-bottom: none;
+}
+
+.election-list a {
+    text-decoration: none;
+    color: #2a2f55;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.election-list a:hover {
+    background: green;
+    color: white;
+}
+
+h2 {
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .container
+ }

@@ -1,0 +1,24 @@
+<!-- admin-delete.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Delete Elections</title>
+    <link rel="stylesheet" href="/css/admin-delete.css">
+</head>
+<body>
+    <h1>Delete Elections</h1>
+    <ul>
+        <!-- Iterate over elections and display delete button for each -->
+        <% elections.forEach(election => { %>
+            <li>
+                <%= election.electionName %> 
+                <form action="/admin/delete-election/<%= election._id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

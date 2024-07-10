@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome, <%= user.username %></h1>
+    </header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/active-elections">Active Elections</a></li>
+        <li><a href="/view-results">View Election Results</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

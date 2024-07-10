@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Pause/Resume Elections</title>
+    <link rel="stylesheet" href="/css/admin-pause.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pause/Resume Elections</h1>
+        </header>
+        <ul class="election-list">
+            <!-- Iterate over elections and display pause or resume button based on election status -->
+            <% elections.forEach(election => { %>
+                <li class="election-item">
+                    <span class="election-name"><%= election.electionName %></span>
+                    <% if (election.isActive) { %>
+                        <!-- If election is active, display pause button -->
+                        <form action="/admin/pause-election/<%= election._id %>" method="POST" class="action-form">
+                            <button type="submit" class="action-button pause-button">Pause</button>
+                        </form>
+                    <% } else { %>
+                        <!-- If election is not active, display resume button -->
+                        <form action="/admin/resume-election/<%= election._id %>" method="POST" class="action-form">
+                            <button type="submit" class="action-button resume-button">Resume</button>
+                        </form>
+                    <% } %>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

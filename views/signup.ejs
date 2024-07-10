@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user_Signup</title>
+    <script
+      src="https://kit.fontawesome.com/524a22cefa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/login_signup.css".css">
+  </head>
+  <body>
+    <div class="electioninfo1">
+      
+    </div>
+    <div class="container">
+      <h1 style="color: darkslateblue;">Sign up</h1>
+      <div class=" card">
+        <img src="images/images.png" alt="logo">
+      </div><br>
+      <form action="/signup" method="post">
+        <div class="input-group">
+          <div class="input-field" id="nameField">
+            <input type="text" id="username" name="username" placeholder="username" required>
+          </div>
+          <div class="input-field" id="emailField">
+            <!-- <input type="email" placeholder="email" /> -->
+          </div>
+          <div class="input-field" id="collageBatchField">
+            <!-- <input type="text" placeholder="SXCMT BT No: Eg:- BCA2021000" /> -->
+          </div>
+          <div class="input-field">
+            <input type="password" id="password" name="password" placeholder="password" required>
+          </div>
+        </div>
+        <div class="btn-field">
+          <button type="submit" id="signupBtn">Sign Up</button>
+        </div>
+      </form>
+     
+      <div class="member">
+        Alrady a member?<a href="/login">Login Here</a>
+        
+      </div>
+    </div>
+    
+</body>
+</html>

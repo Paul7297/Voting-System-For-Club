@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <link rel="stylesheet" href="/css/vote.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vote in <%= election.electionName %></h1>
+        </header>
+        <form action="/submit-vote" method="POST">
+            <input type="hidden" name="electionId" value="<%= election._id %>">
+            <ul class="candidate-list">
+                <% candidates.forEach(candidate => { %>
+                    <li class="candidate-item">
+                        <label class="candidate-label">
+                            <input type="radio" name="selectedCandidate" value="<%= candidate %>">
+                            <span class="candidate-name"><%= candidate %></span>
+                        </label>
+                    </li>
+                <% }); %>
+            </ul>
+            <input type="submit" value="Vote" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>
